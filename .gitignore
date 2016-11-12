@@ -1,1 +1,8 @@
-*
+/*
+!.gitignore
+!/local
+!/index.php
+!/ajax
+!/includes
+!/.top.menu.php
+!/.bottom.menu.php

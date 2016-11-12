@@ -1,0 +1,368 @@
+@media only screen and (min-width:990px) and (max-width: 1210px)  {
+    .header__btn {
+        padding: 5px 7px 5px 7px;
+        font-size: 13px;
+    }
+    .support__ul {
+        padding-left: 10px;
+    }
+    div.footer__copy {
+        width: 60%;
+        top: -136px;
+    }
+    .view3d__arr-r, button.btn-next {
+        right: -2%;
+    }
+    .view3d__arr-l, button.btn-prev {
+        left: -12%;
+
+    }
+}
+@media only screen and (min-width:980px) and (max-width: 1060px) {
+    .header__link {
+        padding-left: 35px;
+    }
+    .reviews__infa  {
+        width: 54%;
+    }
+    .capabilities__regtitle {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (min-width:990px) {
+    .js-fan-zvonok {
+        padding: 30px;
+    }
+
+    .advantage__item {
+        margin-bottom: 39px;
+        min-height: 185px;
+    }
+    .footer__copy {
+        padding: 35px 0 105px 0;
+        width: 65%;
+        top: -175px;
+        height: 0px;
+        margin-bottom: -100px;
+        margin-left: 15px;
+    }
+    .view3d__arrows {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 20;
+        cursor: pointer;
+        left: 0;
+        top: 0;
+    }
+    .about-ko__text {
+        padding-left: 40px;
+    }
+    .btn-prev, .btn-next {
+        position: absolute;
+        height: 188px;
+        width: 132px;
+        top: 293px;
+        opacity: 0.8;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        z-index: 40;
+        border: 0 none;
+        outline: 0 none;
+
+    }
+    .view3d__arr-l, .btn-prev {
+        left: -22%;
+        background: url('../images/arr-l.png') 0 0 no-repeat;
+    }
+    .view3d__arr-r, .btn-next {
+        right: -9%;
+        background: url('../images/arr-r.png') 0 0 no-repeat;
+    }
+    .btn-prev:hover, .btn-next:hover {
+        opacity: 1;
+
+    }
+
+}
+
+@media screen and (max-width:990px) {
+    .hiden-mob {
+        display: none;
+    }
+    .sect-pad2 {
+        padding: 40px 0 40px
+    }
+    .btn-prev, .btn-next {
+        display: none;
+    }
+    .animated {
+        opacity: 1 !important;
+        transform: none !important;
+        animation-name: none !important;
+    }
+    .view3d.sect-pad {
+        padding-bottom: 0px;
+    }
+    .js-mapwrap {
+        width: 100%;
+    }
+    .footer__col-sm-4 {
+        margin-bottom: 45px;
+    }
+    .footer__col-sm-4_last {
+        margin-bottom: 16px ;
+    }
+    .view3d__wrap0 {
+        overflow: hidden;
+        padding: 2px 0 1px;
+    }
+    .view3d__wrap100 {
+        height: 83vw
+    }
+    .footer__tconta {
+        margin-bottom: 18px;
+        color: #fff;
+    }
+    .footer__proezd-name {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+        padding-bottom: 14px;
+    }
+    .footer__proezd-list {
+        width: 100%;
+        float: none;
+    }
+    .footer__copy {
+        padding: 25px 0 8px 0;
+        width: auto;
+        top: 21px;
+        height: auto;
+        clear: both;
+        overflow: hidden;
+        margin: 0px 15px 4px 15px;
+    }
+    .footer__dmenu {
+        text-align: center;
+    }
+    .footer__dmenu-itm {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+    .footer__ctext {
+        text-align: center;
+    }
+    .quest__fwrap {
+        width: 100%;
+    }
+    .support__ul {
+        margin-bottom: 2px;
+        padding-left: 10px;
+    }
+    .view3d__dd3 {
+        padding: 10px 15px 10px 15px;
+        width: calc(100% - 40px);
+        left: 20px;
+        height: auto;
+    }
+    .view3d__canvas {
+        width: 100%;
+    }
+    .advantage__pic {
+        float: left;
+        margin-right: 20px;
+    }
+    .advantage__item {
+        margin-bottom: 43px;
+    }
+    .advantage__text {
+        text-align: left;
+    }
+    .nav-t__contakt2 {
+        display: block;
+    }
+    .nav-t__hide-btn {
+        display: block;
+    }
+    .sect-pad {
+        padding: 48px 0 48px;
+    }
+    .regtitle  {
+        text-align: center;
+        line-height: 45px;
+        font-size: 34px;
+        margin-bottom: 18px;
+    }
+    .nav-t__menu {
+        background-color: #004b88;
+    }
+    .nav-t__link {
+        width: 100%;
+        margin-bottom: 20px;
+        display: block;
+        text-align: center;
+    }
+    .nav-t__container {
+        position: relative;
+        padding: 0;
+        z-index: 3;
+    }
+    .nav-t__menu {
+        padding-bottom: 2px;
+    }
+    .header__connekt {
+        padding: 4px 16px 4px 16px;
+        right: 17px;
+        z-index: 2;
+    }
+    #canvas2 {
+        width: 275px;
+    }
+    .tahio {
+        height: 332px;
+        background: url('../images/topBg_m.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    .about__image_mob {
+        display: block;
+    }
+    .about__image {
+        margin-bottom: 40px;
+    }
+    .capabilities__connection {
+        margin: 40px 0 20px;
+        padding: 15px 15px 29px 15px;
+    }
+    .capabilities__tahog {
+        height: auto;
+        top: 0px;
+        position: relative;
+        width: calc(100% + 60px);
+        left: -30px;
+        right: auto;
+    }
+
+}
+@media only screen and (max-width:650px) {
+    .reviews__item {
+        text-align: center;
+
+    }
+
+    .view3d__link {
+
+        font-size: 16px;
+    }
+    .quest__center {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    div.owl-carousel .owl-item img {
+        display: block;
+        width: auto;
+        max-height: 200px;
+        margin: 0 auto;
+    }
+    .reviews__img,
+    .reviews__infa {
+        float: none;
+    }
+    .quest__form {
+        padding-top: 16px;
+    }
+    .reviews__img {
+        margin: 0 auto 30px auto;
+    }
+    .reviews__infa {
+        width: 100%;
+    }
+    .owl-carousel .owl-item .reviews__facepic {
+        width: auto ;
+        display: inline ;
+    }
+    .reviews__fio {
+        font-size: 24px;
+    }
+    .owl-carousel .owl-stage {
+        padding: 6px 0 25px;
+    }
+}
+@media only screen and (max-width:550px) {
+    .tahio__title {
+        font-size: 45px;
+        text-align: center;
+    }
+    .capabilities__button {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .view3d__wrap100 {
+
+        margin-top: 34px;
+    }
+    .advantage2__pic {
+        display: block;
+        padding: 0 0 0 10px;
+        width: 109px;
+    }
+    .advantage2__text {
+        margin-bottom: 0;
+        width: calc( 100% - 110px );
+    }
+    .four-pic {
+        margin: 20px -15px 30px 95px;
+    }
+    .view3d__dd3 {
+        top: -4vw;
+        margin: 0 auto;
+    }
+    .capabilities__list-itm {
+        margin-bottom: 19px;
+        position: relative;
+        padding-left: 0px;
+        padding-right: 0%;
+        padding-top: 25px;
+        text-align: center;
+    }
+    .capabilities__list-itm:before {
+
+        left: 48%;
+    }
+    .tahio__title-min {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 25px;
+        margin-top: 7px;
+        line-height: 29px;
+    }
+    .btn-lblue, .btn-trans {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 13px;
+    }
+    .btn-lblue {
+        margin-right: 0;
+    }
+    .tahio_btn-lblue {
+        width: 100%;
+        padding: 10px 23px;
+    }
+    .advantage {
+        background: url('../images/topBg2_mob.jpg') center center no-repeat;
+        background-size: cover;
+    }
+
+
+}
+
+
+@media only screen and (max-width:480px) {
+    .js-fan-zvonok {
+        width: 100%;
+    }
+}
+

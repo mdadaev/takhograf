@@ -782,7 +782,8 @@ a {
 .about-ko__pic {
 	width: 100%;
 	position: relative;
-	z-index: 2
+	z-index: 2;
+	min-height: 305px;
 }
 .about-ko__pic_hider {
 	z-index: 0;

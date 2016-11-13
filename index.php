@@ -116,7 +116,7 @@ $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/index.js');
     </section>
     <section class="advantage sect-pad" id="advantage">
         <div class="container" >
-            <div class="animatedParent"><h2 class="regtitle animated bounceInDown">особенности и преимущества тахограф</h2></div>
+            <div class="animatedParent"><h2 class="regtitle animated bounceInDown">особенности и преимущества тахографа</h2></div>
 
                 <?
                 //$GLOBALS["arBenefitsFilter"] = array("PROPERTY_SHOW_ON_MAIN_VALUE" => "Y");

@@ -339,6 +339,128 @@ color:#fff;
 
 
 
+ .view3d__dd3 .col-md-offset-1.col-sm-12 {
+     position: static;
+ }
+
+.loader{
+    width: 300px;
+    height: 25px;
+    border-radius: 14px;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #999;
+    background: #ccc;
+    overflow: hidden;
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+
+.loader.gray{
+  background: #999;
+}
+
+.progress-bar{
+  height: inherit;
+  width: 0%;
+  border-radius: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-stripes{
+  width: inherit;
+  height: inherit;
+  font-size: 180px;
+  font-weight: bold;
+  margin-top: -64px;
+  letter-spacing: -14px;
+}
+
+.percentage{
+  position: absolute;
+  top: 1px;
+  right: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+
+
+/* BLUE */
+.blue .progress-bar{
+  background: #3498db;
+}
+.blue .progress-stripes{
+  color: #2980b9;
+}
+.blue .percentage{
+  color: #eee;
+}
+
+
+
+
+/*** LOADED ***/
+
+span{
+  color: #888;
+  text-shadow: 0 1px 0 #fff;
+}
+
+span.loaded.red{
+  color: #c0392b;
+}
+span.blue {
+  padding-right: 100px;
+    margin-bottom: -24px;
+        display: block;
+}
+
+span.loaded.blue{
+    color: #2980b9;
+
+
+}
+
+
+#blue{
+  background: #2980b9;
+}
+#blue:hover{
+  background: #3498db;
+}
+
+.myspritespin {
+      cursor: move;
+}
+#map-1 {
+      overflow: hidden;
+}
+
+.myspritespin {
+    width: 100%;
+}
+  @media (min-width: 500px) {
+    .myspritespin {
+      width: 500px;
+    }
+  }
+  @media (min-width: 650px) {
+    .myspritespin {
+      width: 650px;
+    }
+  }
+  @media (min-width: 750px) {
+    .myspritespin {
+      width: 750px;
+    }
+  }
+
+
 
 
 
@@ -454,6 +576,18 @@ color:#fff;
    .stepper .stepper-input {
      padding-left: 13px
    }
+   .view3d__arr-r, .btn-next {
+    right: 5%;
+    }
+    .view3d__arr-l, .btn-prev {
+    left: 4%;
+    }
+    .rotation {
+        min-height: 681px
+    }
+    .rotation img {
+        width:100%
+    }
 
  }
  @media only screen and (min-width: 750px)  {
@@ -474,6 +608,17 @@ color:#fff;
  .tahio_btn-margr {
     margin-right: 0px;
     }
+    .loader {
+        width:265px
+    }
+    span.blue {
+    color: #2980b9;
+    padding-bottom: 3px;
+    margin-bottom: 7px;
+    margin-top: -5px;
+    padding-right: 0
+    }
+
 }
 
 
@@ -497,4 +642,11 @@ color:#fff;
 
 .about-ko__pic {
     min-height: 305px
+}
+.view3d__play {
+    opacity: 0.7;
+    transition: all 0.4s
+}
+.view3d__play:hover {
+    opacity: 1
 }

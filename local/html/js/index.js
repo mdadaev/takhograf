@@ -53,16 +53,7 @@ btnReverse.addEventListener('click', function (e) {
   camera.play(37);
   console.log( 'klik' );
   }
-setTimeout(play3d, 5000);
-
-
-
-
-
-
-
-
-
+setTimeout(play3d, 300);
 
 
 
@@ -125,12 +116,7 @@ function isActive(el) {
  * Автозапуск
  */
 
-$(document).ready(function() {
-   function begin() {
-  btnPlay.click();
-}
- setTimeout(begin, 3000); 
-});
+
 
 
 
@@ -167,7 +153,7 @@ function Rotation(el) {
   this.el = el;
   this.current = 0;
   this.cycle();
-  this.interval(75);
+  this.interval(50);
   this.start(0);
   this._ontouchstart = bind(this, 'ontouchstart');
   this._ontouchmove = bind(this, 'ontouchmove');
@@ -263,7 +249,7 @@ Rotation.prototype.start = function(n) {
 
   for (var i = 0, len = children.length; i < len; i++) {
     children[i].style.display = 'none';
-    children[i].style.width = '100%';
+   children[i].style.width = '100%';
   }
 
   this.show(n);

@@ -27,6 +27,67 @@ var svg = '<svg xmlns="http://www.w3.org/2000/svg" style="display:none">  <symbo
 
 
 
+ /*	var arr = [];
+	//trop lazy pour tout taper...
+	for (var x=43; x<= 80; x++)
+		arr.push("js/3dvr/DSC000" +x + ".jpg");
+
+
+   $("#click").threesixty({images:arr, method:'click', 'cycle':2, 'resetMargin': 10});
+
+*/
+
+
+
+
+ var api = $("#mySpriteSpin").spritespin({
+    source: SpriteSpin.sourceArray('js/3dvr/DSC000{frame}.jpg', {
+                // this ramge of numbers is interpolated into the {frame} placeholder
+                frame: [43,80],
+                // the frame placeholder will be padded with leading '0' up to the number of 'digits'
+                digits: 2
+            }),
+            width: 750,
+            frameTime: 60,
+            height: 681,
+             loop: true,
+             sense: -1,
+             responsive: true,
+             animate: false
+}).spritespin("api");
+
+// запуск 3д слайдера товара
+$( ".view3d__play" ).click(function(){
+    api.data.animate = !api.data.animate;
+    SpriteSpin.setAnimation(api.data);
+});
+var arroleft = document.querySelector(".btn-prev");
+var arroright = document.querySelector(".btn-next");
+var interval;
+arroleft.addEventListener('mousedown', function() {
+    interval = setInterval(toleft, 60);
+});
+arroleft.addEventListener('mouseup', function () {
+    clearInterval(interval);
+});
+function toleft()
+{
+    return api.skipFrames(1);
+};
+
+ var interval2;
+arroright.addEventListener('mousedown', function() {
+    interval2 = setInterval(toright, 60);
+});
+arroright.addEventListener('mouseup', function () {
+    clearInterval(interval2);
+});
+function toright()
+{
+    return api.skipFrames(-1);
+};
+// запуск 3д слайдера товара
+
 
 
 
@@ -155,11 +216,7 @@ setTimeout(loadYmap, 5000);
   //запускаем ямапс через 5 сек
   function addclasstoFunsy2() {
 
-  var htmli = "<img src='js/3dvr/DSC00043.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00044.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00045.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00046.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00047.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00048.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00049.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00050.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00051.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00052.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00053.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00054.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00055.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00056.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00057.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00058.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00059.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00060.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00061.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00062.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00063.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00064.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00065.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00066.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00067.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00068.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00069.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00070.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00071.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00072.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00073.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00074.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00075.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00076.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00077.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00078.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00079.jpg' style='display:none;width:100%' alt=''> <img src='js/3dvr/DSC00080.jpg' style='display:none;width:100%' alt=''>" ;
-    $("#many-images" ).append(htmli);
-    //грузим 3д модуль
-    var d34 = "<script src='js/index.js'></script>";
-    $("body").append(d34);
+
 
   ymaps.ready(init);
     function init () {
@@ -322,6 +379,99 @@ setTimeout(addclasstoFunsy2, 6500); //грузим карту и 3д через 
     }
 );
 wow.init();
+
+
+
+
+
+//функция прелоад картинок
+
+/* SET RANDOM LOADER COLORS FOR DEMO PURPOSES */
+	var demoColorArray = ['red','blue','green','yellow','purple','gray'];
+	var colorIndex = Math.floor(Math.random()*demoColorArray.length);
+	setSkin(demoColorArray[1]);
+
+
+	/* RANDOM LARGE IMAGES FOR DEMO PURPOSES */
+	var demoImgArray = ['js/3dvr/DSC00043.jpg','js/3dvr/DSC00044.jpg','js/3dvr/DSC00045.jpg','js/3dvr/DSC00046.jpg','js/3dvr/DSC00047.jpg','js/3dvr/DSC00048.jpg','js/3dvr/DSC00049.jpg','js/3dvr/DSC00050.jpg','js/3dvr/DSC00051.jpg','js/3dvr/DSC00052.jpg','js/3dvr/DSC00053.jpg','js/3dvr/DSC00054.jpg','js/3dvr/DSC00055.jpg','js/3dvr/DSC00056.jpg','js/3dvr/DSC00057.jpg','js/3dvr/DSC00058.jpg','js/3dvr/DSC00059.jpg','js/3dvr/DSC00060.jpg','js/3dvr/DSC00061.jpg','js/3dvr/DSC00062.jpg','js/3dvr/DSC00063.jpg','js/3dvr/DSC00064.jpg','js/3dvr/DSC00065.jpg','js/3dvr/DSC00066.jpg','js/3dvr/DSC00067.jpg','js/3dvr/DSC00068.jpg','js/3dvr/DSC00069.jpg','js/3dvr/DSC00070.jpg','js/3dvr/DSC00071.jpg','js/3dvr/DSC00072.jpg','js/3dvr/DSC00073.jpg','js/3dvr/DSC00074.jpg','js/3dvr/DSC00075.jpg','js/3dvr/DSC00076.jpg','js/3dvr/DSC00078.jpg','js/3dvr/DSC00079.jpg','js/3dvr/DSC00080.jpg'];
+
+	// Stripes interval
+	var stripesAnim;
+	var calcPercent;
+
+	$progress = $('.progress-bar');
+	$percent = $('.percentage');
+	$stripes = $('.progress-stripes');
+	$stripes.text('////////////////////////');
+
+	/* CHANGE LOADER SKIN */
+	$('.skin').click(function(){
+		var whichColor = $(this).attr('id');
+		setSkin(whichColor);
+	});
+
+	// Call function to load array of images
+	preload(demoImgArray);
+
+	// Call function to animate stripes
+	stripesAnimate();
+    $("#many-images" ).css('opacity', '0');;
+	/* WHEN LOADED */
+	$(window).load(function() {
+		loaded = true;
+		$progress.animate({
+			width: "100%"
+		}, 100, function() {
+			$("span").text('Loaded!').addClass('loaded');
+			$percent.text('100%');
+			clearInterval(calcPercent);
+			clearInterval(stripesAnim);
+                $("#many-images" ).css('opacity', '1')
+                        $(".loader, .loaded").fadeOut("slow");
+
+
+		});
+	});
+
+	/*** FUNCTIONS ***/
+
+	/* LOADING */
+	function preload(imgArray) {
+		var increment = Math.floor(100 / imgArray.length);
+		$(imgArray).each(function() {
+			$('<img>').attr("src", this).load(function() {
+				$progress.animate({
+					width: "+=" + increment + "%"
+				}, 100);
+			});
+		});
+		calcPercent = setInterval(function() {
+
+			//loop through the items
+			$percent.text(Math.floor(($progress.width() / $('.loader').width()) * 100) + '%');
+
+		});
+	}
+
+	/* STRIPES ANIMATION */
+	function stripesAnimate() {
+		animating();
+		stripesAnim = setInterval(animating, 2500);
+	}
+
+	function animating() {
+		$stripes.animate({
+			marginLeft: "-=30px"
+		}, 2500, "linear").append('/');
+	}
+
+	function setSkin(skin){
+		$('.loader').attr('class', 'loader '+skin);
+		$('span').hasClass('loaded') ? $('span').attr('class', 'loaded '+skin) : $('span').attr('class', skin);
+	}
+
+//функция прелоад картинок
+
 
 
 }); //.ready(function() {

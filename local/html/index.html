@@ -416,10 +416,19 @@
 								<div class="row">
 									<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
 										<div id="many-images" class="rotation" style="position: relative; width: 100%;">
+										    <div id='mySpriteSpin' class="container myspritespin"></div>
+										</div>   <!--id="many-images"-->
 
 
+                                            <!-- actual preloader -->
+                                            <div class="loader">
+	                                        	<div class="progress-bar">
+	                                        	    <div class="progress-stripes"></div>
+                                                    <div class="percentage">0%</div>
+                                                </div>
+	                                        </div>
+	                                        <span class="loadtext">Грузим...</span>
 
-										</div>
 
 										<div class="view3d__hide">
 											<button class="btn btn-default btn-cycle active">Cycle</button>
@@ -430,20 +439,23 @@
 
 
 											<button class="btn btn-default btn-play-to2">Play to 0</button>
-											
-											<div class="view3d__button-wrap">
+
+                                            <div class="view3d__button-wrap">
 												<button class="btn-play view3d__play"> </button>
-												
+
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div> <!-- class="view3d__dd3"> -->
+
 					</div>  <!--  class="view3d__container3d container"> -->
 				</div> <!-- class="view3d__wrap100"> -->
-			</div> <!-- class="view3d__wrap0"> -->	
+			</div> <!-- class="view3d__wrap0"> -->
 		</section>
+
+
 		<section class="about-ko sect-pad" id="about-ko">
 			<div class="container ">
 				<h2 class="regtitle regtitle_blu wow fadeInDown">о компании</h2>
@@ -888,6 +900,8 @@ E-mail: shop@elcar.ru
 
 		<script src="js/wow.min.js"></script>
 		<script src="js/jquery.magnific-popup.min.js"></script>
+	  <!--	<script src="js/jquery.threesixty.js"></script>-->
+        <script src="js/spritespin.js"></script>
 	   <!--	<script src="js/index2.js"></script>  -->
 	   <!-- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>   -->
 		<script src="js/main.js"></script>

@@ -2,35 +2,35 @@
 $aMenuLinks = Array(
 	Array(
 		"ПРОИЗВОДСТВО", 
-		"#about", 
+		"/#about",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"ОСОБЕННОСТИ", 
-		"#advantage", 
+		"/#advantage",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"ТЕХПОДДЕРЖКА", 
-		"#support", 
+		"/#support",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		" О КОМПАНИИ", 
-		"#about-ko", 
+		"/#about-ko",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		" КОНТАКТЫ", 
-		"#kontakts", 
+		"/#kontakts",
 		Array(), 
 		Array(), 
 		"" 

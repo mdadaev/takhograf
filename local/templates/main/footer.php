@@ -276,11 +276,6 @@
             </form>
         </div>
 
-        <?$APPLICATION->IncludeFile('/includes/footer__main-office-info.php', array(), array('NAME' => 'Головной офис', 'MODE' => 'html'));?>
-        <?$APPLICATION->IncludeFile('/includes/footer__stock.php', array(), array('NAME' => 'Склад', 'MODE' => 'html'));?>
-        <?$APPLICATION->IncludeFile('/includes/footer__delivery-point.php', array(), array('NAME' => 'Пункт выдачи заказов', 'MODE' => 'html'));?>
-
-
         <div  id="spasib" class="js-fan-zvonok center">
             <div class="spacib-pad">
                 <svg  width="111px" height="56px">

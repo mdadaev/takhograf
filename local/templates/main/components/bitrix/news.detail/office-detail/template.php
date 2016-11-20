@@ -31,53 +31,25 @@ $this->setFrameMode(true);
 		}
 	}
 	if( !empty($arResult["PROPERTIES"]["MAP"]["VALUE"]) ) {
+		$arCoords = explode(',', $arResult["PROPERTIES"]["MAP"]["VALUE"]);
 		?>
 		<div class="footer__map-wrap2">
-			<div id="map-<?= $arResult['ID'] ?>" class="map-popup"></div>
+			<div id="map-<?= $arResult['ID'] ?>" class="map-popup js-map-popup" 
+				data-id="<?=$arResult['ID']?>" 
+				data-x="<?=reset($arCoords)?>" 
+				data-y="<?=end($arCoords)?>" 
+				data-address="<?=$arResult["PROPERTIES"]["ADDRESS"]["VALUE"]?>">
+				<address>,
+					<strong><?=$arResult["PROPERTIES"]["HEADER"]["VALUE"]?></strong>,
+					<?if( !empty($arResult["PROPERTIES"]["ADDRESS"]["VALUE"]) )
+					{
+						?><br/>,
+						Адрес: <?=$arResult["PROPERTIES"]["ADDRESS"]["VALUE"]?>'<?
+					}?>
+					</address>
+			</div>
 		</div>
-		<script>
-			// Дождёмся загрузки API и готовности DOM.
-			ymaps.ready(init);
-
-			function init () {
-				var myMap = new ymaps.Map("map-<?=$arResult['ID']?>", {
-						center: [<?=$arResult["PROPERTIES"]["MAP"]["VALUE"]?>],
-						zoom: 17,
-						controls: ["fullscreenControl", "zoomControl"]
-					}, {
-						searchControlProvider: 'yandex#search'
-					}),
-
-				// Создаем геообъект с типом геометрии "Точка".
-					myGeoObject = new ymaps.GeoObject({
-						// Описание геометрии.
-					}, {
-						// Опции.
-						// Иконка метки будет растягиваться под размер ее содержимого.
-						preset: 'islands#blackStretchyIcon',
-						// Метку можно перемещать.
-						draggable: true
-					});
-
-				myMap.geoObjects
-					.add(myGeoObject)
-					.add(new ymaps.Placemark([<?=$arResult["PROPERTIES"]["MAP"]["VALUE"]?>], {
-						balloonContentBody: [
-							'<address>',
-							'<strong><?=$arResult["PROPERTIES"]["HEADER"]["VALUE"]?></strong>',
-							<?if( !empty($arResult["PROPERTIES"]["ADDRESS"]["VALUE"]) )
-								{
-								?>'<br/>',
-							'Адрес: <?=$arResult["PROPERTIES"]["ADDRESS"]["VALUE"]?>',<?
-							}?>
-							'</address>'
-						].join(''),
-						iconCaption: '<?=$arResult["PROPERTIES"]["ADDRESS"]["VALUE"]?>'
-					}, {
-						preset: 'islands#blueDotIconWithCaption'
-					}));
-			}
-		</script><?
+		<?
 	}
 	?>
 	<?if( !empty($arResult["DETAIL_TEXT"]) )

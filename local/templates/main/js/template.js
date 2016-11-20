@@ -1,3 +1,52 @@
+/**
+ * Загрузка карт
+ */
+
+function loadMaps() {
+    var $jsMaps = $('.js-map-popup');
+    if ($jsMaps.length) {
+        $jsMaps.each(function () {
+        
+            var body = $(this).html();
+            $(this).html('');
+
+            var myMap = new ymaps.Map("map-" + $(this).data('id'), {
+                    center: [$(this).data('x'), $(this).data('y')],
+                    zoom: 17,
+                    controls: ["fullscreenControl", "zoomControl"]
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+
+            // Создаем геообъект с типом геометрии "Точка".
+                myGeoObject = new ymaps.GeoObject({
+                    // Описание геометрии.
+                }, {
+                    // Опции.
+                    // Иконка метки будет растягиваться под размер ее содержимого.
+                    preset: 'islands#blackStretchyIcon',
+                    // Метку можно перемещать.
+                    draggable: true
+                });
+
+            myMap.geoObjects
+                .add(myGeoObject)
+                .add(new ymaps.Placemark([$(this).data('x'), $(this).data('y')], {
+                        balloonContentBody: [
+                            body
+                        ].join(''),
+                        iconCaption: $(this).data('address')
+                    }, {
+                        preset: 'islands#blueDotIconWithCaption'
+                    }
+                    )
+                );
+
+
+        });
+    }
+}
+
 $(document).ready(function () {
     // обработка форм
     $(document).on('click', '.js-forma__send', function (e) {
@@ -218,10 +267,16 @@ $(document).ready(function () {
             cache: false,
             url: '/ajax/office-detail.php',
             success: function (data) {
+
                 $.fancybox(
                     $(data), {
-                        'padding': 0
+                        'padding': 0,
+                        'afterShow': function () {
+                            ymaps.ready(loadMaps);
+                        }
                     });
+
+
             }
         });
     });
@@ -239,5 +294,6 @@ $(document).ready(function () {
     $(document).on('click', '.js-download', function () {
         $(this).blur();
     });
+
 
 });

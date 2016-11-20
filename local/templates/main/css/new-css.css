@@ -236,6 +236,12 @@ color:#fff;
      /*display: none;*/
  }
 
+.capabilities-windows.office {
+    width: 572px;
+    background-color: #fff;
+    padding: 5vh 25px 2vh 25px;
+}
+
  .capabilities-windows__biglogo {
     width: 47%;
     max-height: 80px;

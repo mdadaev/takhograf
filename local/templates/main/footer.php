@@ -101,22 +101,64 @@
                         <div class="footer__map-wrap animated fadeInLeftShort delay-750" data-id='6'>
 
                             <div class="footer__maping">
-                                <div id="map-1"></div>
+                                <div>
+                                    <a href="https://yandex.ru/maps/?um=constructor:0kH17taHBe-lGUC_Z6SJ-X7fZWb-jfgq&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=0kH17taHBe-lGUC_Z6SJ-X7fZWb-jfgq&amp;width=360&amp;height=200&amp;lang=ru_RU&amp;sourceType=constructor" alt="" style="border: 0;"></a>
+                                </div>
                             </div>
                         </div>
-                        <div class="footer__proezd-w animated fadeInLeftShort delay-750" data-id='7'>
-                            <b class="footer__proezd-name">Проезд:</b>
-                            <ul class="footer__proezd-list">
-                                <li class="footer__proezd-itm">
-                                    <a class="footer__proezd-link fancybox" href="#map1"> К офису</a></li>
-                                <li class="footer__proezd-itm">
-                                    <a class="footer__proezd-link fancybox" href="#map2"> К складу</a></li>
-                                <li class="footer__proezd-itm">
-                                    <a class="footer__proezd-link fancybox" href="#map3"> К пункту выдачи</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> <!-- class="col-sm-4"> -->
+                        <?$APPLICATION->IncludeComponent("bitrix:news.list","office-contacts",Array(
+                                "DISPLAY_DATE" => "N",
+                                "DISPLAY_NAME" => "Y",
+                                "DISPLAY_PICTURE" => "N",
+                                "DISPLAY_PREVIEW_TEXT" => "N",
+                                "AJAX_MODE" => "N",
+                                "IBLOCK_TYPE" => "Content",
+                                "IBLOCK_ID" => "12",
+                                "NEWS_COUNT" => "20",
+                                "SORT_BY1" => "SORT",
+                                "SORT_ORDER1" => "ASC",
+                                "SORT_BY2" => "ACTIVE_FROM",
+                                "SORT_ORDER2" => "DESC",
+                                "FILTER_NAME" => "",
+                                "FIELD_CODE" => Array(),
+                                "PROPERTY_CODE" => Array(),
+                                "CHECK_DATES" => "Y",
+                                "DETAIL_URL" => "",
+                                "PREVIEW_TRUNCATE_LEN" => "",
+                                "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                                "SET_TITLE" => "N",
+                                "SET_BROWSER_TITLE" => "N",
+                                "SET_META_KEYWORDS" => "N",
+                                "SET_META_DESCRIPTION" => "N",
+                                "SET_LAST_MODIFIED" => "N",
+                                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                                "ADD_SECTIONS_CHAIN" => "N",
+                                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                                "PARENT_SECTION" => "",
+                                "PARENT_SECTION_CODE" => "",
+                                "INCLUDE_SUBSECTIONS" => "Y",
+                                "CACHE_TYPE" => "A",
+                                "CACHE_TIME" => "36000000",
+                                "CACHE_FILTER" => "N",
+                                "CACHE_GROUPS" => "N",
+                                "DISPLAY_TOP_PAGER" => "N",
+                                "DISPLAY_BOTTOM_PAGER" => "N",
+                                "PAGER_TITLE" => "Контакты",
+                                "PAGER_SHOW_ALWAYS" => "N",
+                                "PAGER_TEMPLATE" => "",
+                                "PAGER_DESC_NUMBERING" => "N",
+                                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                                "PAGER_SHOW_ALL" => "Y",
+                                "PAGER_BASE_LINK_ENABLE" => "N",
+                                "SET_STATUS_404" => "N",
+                                "SHOW_404" => "N",
+                                "MESSAGE_404" => "",
+                                "PAGER_BASE_LINK" => "",
+                                "PAGER_PARAMS_NAME" => "arrPager"
+                            )
+                        );?>
+                    </div>
+                    <!-- class="col-sm-4"> -->
 
 
                     <div class="animatedParent clearfix">

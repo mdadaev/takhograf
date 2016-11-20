@@ -32,7 +32,6 @@ $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/spritespin.js');
 $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
 $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/template.js');
 ?>
-
     <!doctype html>
     <html>
     <head>

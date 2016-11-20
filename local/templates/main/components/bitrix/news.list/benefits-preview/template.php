@@ -18,13 +18,13 @@ if (empty($arResult['ITEMS'])) {
 }
 
 ?>
-<div class="row advantage_row animatedParent" data-sequence='250'>
+<div class="row advantage_row">
     <? $counter = 0;
     foreach ($arResult['ITEMS'] as $k => $arItem) {
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BCS_ELEMENT_DELETE_CONFIRM')));
         ?>
-        <div class="col-sm-4 advantage__item animated fadeInDownShort <?= ($counter == 0) ? "col-md-offset-2" : "" ?>" data-id='<?= $k ?>' id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+        <div class="col-sm-4 advantage__item wow fadeInDownShort <?= ($counter == 0) ? "col-md-offset-2" : "" ?>" data-id='<?= $k ?>' id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
             <a href="#wawes-js-<?= $k ?>" class="fancybox fancybox-ajax" data-id="<?= $arItem['ID'] ?>" data-iblock="<?= $arItem['IBLOCK_ID'] ?>">
                 <i class="capabilities__pic">
                     <img class="advantage__img" src="<?= $arItem['DISPLAY_PROPERTIES']['ICON_PATH']['VALUE'] ?>" width="75px" height="75px">

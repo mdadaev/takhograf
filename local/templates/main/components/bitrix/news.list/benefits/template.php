@@ -18,8 +18,8 @@ if( empty($arResult['ITEMS']) ){
 }
 
 ?><section class="advantage2 sect-pad2" id="advantage">
-    <div class="container animatedParent" data-sequence='300'>
-        <h2 class="regtitle regtitle_blu advantage2_regtitle  animated fadeInUpShort" data-id='0'><?=$arParams['SECTION_HEADER']?></h2><?
+    <div class="container">
+        <h2 class="regtitle regtitle_blu advantage2_regtitle  wow fadeInUpShort" data-id='0'><?=$arParams['SECTION_HEADER']?></h2><?
 		foreach($arResult['ITEMS'] as $k => $arItem){
 			$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 			$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BCS_ELEMENT_DELETE_CONFIRM')));		

@@ -18,7 +18,7 @@ if (empty($arResult['ITEMS'])) {
 }
 
 ?>
-<div class="row capabilities_row animatedParent" data-sequence="250">
+<div class="row capabilities_row">
 <?
 $counter = 0;
 foreach ($arResult['ITEMS'] as $k => $arItem) {
@@ -26,7 +26,7 @@ foreach ($arResult['ITEMS'] as $k => $arItem) {
     $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BCS_ELEMENT_DELETE_CONFIRM')));
     ?>
 
-    <div class="col-sm-4 advantage__item animated  fadeInDownShort"  data-id='<?= $k ?>'  id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+    <div class="col-sm-4 advantage__item wow  fadeInDownShort" data-wow-delay="<?=200 * ($k+1)?>ms"  data-id='<?= $k ?>'  id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
 
         <a href="#wawes-js-<?=$k?>" class="fancybox fancybox-ajax" data-id="<?=$arItem['ID']?>" data-iblock="<?= $arItem['IBLOCK_ID'] ?>">
             <i class="capabilities__pic">

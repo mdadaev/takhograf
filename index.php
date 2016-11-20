@@ -1,6 +1,5 @@
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-
-use \Bitrix\Main\Page\Asset;
+<?
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle('НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ ЭЛКАР');
 ?>
     <section class="tahio">
@@ -12,15 +11,15 @@ $APPLICATION->SetTitle('НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДП
                     <h3 class="tahio__title-min wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="1400ms">Современные технологии для
                         <br> контроля и безопасности </h3>
                     <div class="wrap ">
-                        <a href="#kontakt-f" class="btn fancybox btn-lblue tahio_btn-lblue wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="1600ms">Заказать тахограф</a>
+                        <a href="#order" class="btn fancybox btn-lblue tahio_btn-lblue wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="1600ms">Заказать тахограф</a>
                         <a href="#kontakt-f" class="btn fancybox btn-lblue tahio_btn-lblue wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="1800ms">Заказать консультацию</a>
                     </div>
                 </div>
                 <div class="col-md-6 tahio__rel wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="1400ms">
-                    <img class="big-tagograf wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="1200ms" src="<?=SITE_TEMPLATE_PATH?>/images/new/tahograf.png" alt="">
+                    <img class="big-tagograf wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="1200ms" src="<?=SITE_TEMPLATE_PATH?>/images/tahograf.png" alt="">
                     <div class="wrap ">
-                        <a href="#kontakt-f wow fadeInLeft" data-wow-delay="1400ms" data-wow-duration="1500ms" class="btn fancybox btn-trans tahio_btn-trans tahio_btn-margr">Посмотреть 3D</a>
-                        <a href="#kontakt-f wow fadeInLeft" data-wow-delay="1600ms" data-wow-duration="1500ms" class="btn fancybox btn-trans tahio_btn-trans">Посмотреть эмулятор</a>
+                        <a href="#view3d" data-wow-delay="1400ms" data-wow-duration="1500ms" class="btn btn-trans tahio_btn-trans tahio_btn-margr">Посмотреть 3D</a>
+                        <a href="/images/takhograf-emulator.zip" data-wow-delay="1600ms" data-wow-duration="1500ms" class="btn fancybox btn-trans tahio_btn-trans js-download">Посмотреть эмулятор</a>
                     </div>
                 </div>
             </div>
@@ -28,7 +27,7 @@ $APPLICATION->SetTitle('НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДП
     </section>
     <section class="about sect-pad" id="about">
         <div class="container">
-            <div class="row animatedParent">
+            <div class="row">
                 <?
                 $APPLICATION->IncludeComponent(
                     "bitrix:news.list",
@@ -100,7 +99,7 @@ $APPLICATION->SetTitle('НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДП
                     false
                 );?>
 
-                <div class="col-md-5 animated bounceInRight delay-750 col-md-offset-1">
+                <div class="col-md-5 wow bounceInRight delay-750 col-md-offset-1" data-wow-delay="2000ms" data-wow-duration="1500ms">
                     <h2 class="regtitle regtitle_blu regtitle_about "><? $APPLICATION->IncludeFile('/includes/main/about-header.php', array(), array('NAME' => 'Заголовок блока ПРОИЗВОДСТВО', 'MODE' => 'text')); ?></h2>
                     <? $APPLICATION->IncludeFile('/includes/main/about-text.php', array(), array('NAME' => 'Текст блока ПРОИЗВОДСТВО', 'MODE' => 'html')); ?>
                 </div>
@@ -110,7 +109,7 @@ $APPLICATION->SetTitle('НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДП
     </section>
     <section class="advantage sect-pad" id="advantage">
         <div class="container" >
-            <div class="animatedParent"><h2 class="regtitle animated bounceInDown">особенности и преимущества тахографа</h2></div>
+            <div><h2 class="regtitle wow fadeInDownShort">особенности и преимущества тахографа</h2></div>
 
                 <?
                 //$GLOBALS["arBenefitsFilter"] = array("PROPERTY_SHOW_ON_MAIN_VALUE" => "Y");
@@ -336,7 +335,7 @@ $APPLICATION->SetTitle('НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДП
 );?>
 
     <section class="view3d sect-pad" id="view3d">
-        <div class="container center view3d__font animatedParent">
+        <div class="container center view3d__font">
             <? $APPLICATION->IncludeFile('/includes/main/software.php', array(), array('NAME' => 'ПО ДЛЯ РАБОТЫ С ТАХОГРАФОМ', 'MODE' => 'html')); ?>
         </div>
         <!-- class="container center view3d__font"> -->
@@ -389,8 +388,8 @@ $APPLICATION->SetTitle('НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДП
         <!-- class="view3d__wrap0"> -->
     </section>
     <section class="about-ko sect-pad" id="about-ko">
-        <div class="container animatedParent">
-            <h2 class="regtitle regtitle_blu animated fadeInDown">о компании</h2>
+        <div class="container">
+            <h2 class="regtitle regtitle_blu wow fadeInUp fadeInDown">о компании</h2>
 
             <div class="row about-ko__row ">
 
@@ -404,7 +403,7 @@ $APPLICATION->SetTitle('НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДП
                         </svg>
                     </div>
                 </div>
-                <div class="col-sm-6 about-ko__text animated bounceInRight">
+                <div class="col-sm-6 about-ko__text wow bounceInRight">
                     <? $APPLICATION->IncludeFile('/includes/main/about.php', array(), array('NAME' => 'О компании', 'MODE' => 'html')); ?>
                 </div>
             </div>

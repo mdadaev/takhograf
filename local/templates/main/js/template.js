@@ -12,7 +12,7 @@ $(document).ready(function () {
                 $(this).addClass('field field_error');
                 $(this).next('.field_error_mess').remove();
                 console.log(this.validationMessage);
-                $(this).after( "<p class='field_error_mess'>" + this.validationMessage + "</p>" );
+                $(this).after("<p class='field_error_mess'>" + this.validationMessage + "</p>");
                 errorFields++;
             }
             else {
@@ -23,8 +23,8 @@ $(document).ready(function () {
 
         if (!errorFields) {
 
-            if($order.length) { // присутствует поле заказ
-                if(!$order.val()) {
+            if ($order.length) { // присутствует поле заказ
+                if (!$order.val()) {
                     alert('не выбран не один товар');
                     return false;
                 }
@@ -61,7 +61,7 @@ $(document).ready(function () {
         $.each($(".js-order-product-container"), function () {
             var name = $(this).find(".js-order-product-name").text();
             var count = $(this).find(".js-order-product-count").val();
-            if(count > 0) {
+            if (count > 0) {
                 orderExist = true;
             }
             orderList.push({
@@ -71,7 +71,7 @@ $(document).ready(function () {
 
         });
         orderListJSon = JSON.stringify(orderList);
-        if(orderExist) {
+        if (orderExist) {
             $(".js-order-list").val(orderListJSon);
         }
         else {
@@ -207,6 +207,25 @@ $(document).ready(function () {
         });
     });
 
+    $(document).on('click', '.footer__proezd-list a', function () {
+        var $this = $(this);
+        var elId = $this.data('id');
+        var ib = $this.data('iblock');
+
+        $.ajax({
+            type: "POST",
+            data: {'ID': elId, 'IBLOCK': ib},
+            cache: false,
+            url: '/ajax/office-detail.php',
+            success: function (data) {
+                $.fancybox(
+                    $(data), {
+                        'padding': 0
+                    });
+            }
+        });
+    });
+
     $(document).on('click', '.capabilities__item a', function () {
         setTimeout(addclasstoFunsy, 1000);
     });
@@ -216,5 +235,9 @@ $(document).ready(function () {
             padding: 0
         }
     );
+
+    $(document).on('click', '.js-download', function () {
+        $(this).blur();
+    });
 
 });

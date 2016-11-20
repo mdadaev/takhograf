@@ -74,11 +74,11 @@
     }
     .view3d__arr-l, .btn-prev {
         left: -22%;
-        background: url('../images//arr-l.png') 0 0 no-repeat;
+        background: url('../images/arr-l.png') 0 0 no-repeat;
     }
     .view3d__arr-r, .btn-next {
         right: -9%;
-        background: url('../images//arr-r.png') 0 0 no-repeat;
+        background: url('../images/arr-r.png') 0 0 no-repeat;
     }
     .btn-prev:hover, .btn-next:hover {
         opacity: 1;
@@ -223,7 +223,7 @@
     }
     .tahio {
         height: 332px;
-        background: url('../images//topBg_m.jpg') center center no-repeat;
+        background: url('../images/topBg_m.jpg') center center no-repeat;
         background-size: cover;
     }
     .about__image_mob {
@@ -352,7 +352,7 @@
         padding: 10px 23px;
     }
     .advantage {
-        background: url('../images//topBg2_mob.jpg') center center no-repeat;
+        background: url('../images/topBg2_mob.jpg') center center no-repeat;
         background-size: cover;
 }
     

@@ -18,12 +18,12 @@ if( empty($arResult['ITEMS']) ){
 }
 
 ?><section class="reviews sect-pad" id="reviews">
-	<div class="container animatedParent">
-		<h2 class="regtitle center regtitle_blu animated fadeInUpShort"><?=$arParams['SECTION_HEADER']?></h2>
+	<div class="container">
+		<h2 class="regtitle center regtitle_blu wow fadeInDown"><?=$arParams['SECTION_HEADER']?></h2>
 		<div class="reviews__wrap owl-carousel2"><?
 			foreach($arResult['ITEMS'] as $k => $arItem){
 				$this->AddEditAction($arItem['ID'], "/bitrix/admin/iblock_element_edit.php?IBLOCK_ID=" . $arParams['IBLOCK_ID'] . "&type=Content&ID=" . $arItem['ID'] . "&bxpublic=Y", "Изменить элемент");
-				?><div class="reviews__item animated fadeInUpShort slowest col-md-6" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+				?><div class="reviews__item wow fadeInUpShort slowest col-md-6" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 					<div class="reviews__img">
 						<img class="reviews__facepic" src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="">
 					</div>

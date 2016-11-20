@@ -17,7 +17,7 @@ if (empty($arResult['ITEMS'])) {
     return;
 }
 ?>
-<div class="col-md-6 animated bounceInLeft delay-750">
+<div class="col-md-6 wow bounceInLeft " data-wow-delay="1800ms" data-wow-duration="1500ms">
     <div class="about__pictures row">
         <? foreach ($arResult['ITEMS'] as $k => $arItem) {
             $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));

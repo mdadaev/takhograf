@@ -236,17 +236,18 @@ color:#fff;
      /*display: none;*/
  }
 
+ .capabilities-windows__biglogo {
+    width: 47%;
+    max-height: 80px;
+
+ }
+
 .capabilities-windows.office {
     width: 572px;
     background-color: #fff;
     padding: 5vh 25px 2vh 25px;
 }
 
- .capabilities-windows__biglogo {
-    width: 47%;
-    max-height: 80px;
-
- }
  .capabilities-windows__logo-wrap {
      text-align: center;
      border: 3px solid #fff;

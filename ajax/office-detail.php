@@ -10,6 +10,7 @@ global $APPLICATION;
 $obRequest = Application::getInstance()->getContext()->getRequest()->getPostList();
 $elId = $obRequest->getRaw('ID');
 $ibId = $obRequest->getRaw('IBLOCK');
+
 if($elId && $ibId) {
     ob_start();
     $APPLICATION->IncludeComponent("bitrix:news.detail","office-detail",Array(

@@ -20,7 +20,6 @@ $(document).ready(function () {
 
     });
 
-
     //var picH = $(".about-ko__pic").height();
     $(".about-ko__pic, .about-ko__play").on('click', function () {
         $(".about-ko__play").fadeOut();

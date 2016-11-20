@@ -12,6 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+
 <div class="capabilities-windows center office">
 	<?if($arParams["DISPLAY_NAME"]!="N" && $arResult["NAME"]):?>
 	<h2 class="regtitle regtitle_blu"><?=$arResult["PROPERTIES"]["HEADER"]["VALUE"]?></h2>

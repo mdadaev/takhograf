@@ -13,6 +13,7 @@ function init() {
     createjs.Touch.enable(stage);
     
     var imgList = ["http://takhograf.p-w-d.ru/images/DSC00041.jpg",
+                   "http://takhograf.p-w-d.ru/images/DSC00042.jpg",
                    "http://takhograf.p-w-d.ru/images/DSC00043.jpg",
                    "http://takhograf.p-w-d.ru/images/DSC00044.jpg",
                    "http://takhograf.p-w-d.ru/images/DSC00045.jpg",
@@ -155,7 +156,7 @@ function init() {
     
     
     load360Image();
-
+    
     
      // TICKER
     createjs.Ticker.addEventListener("tick", handleTick);

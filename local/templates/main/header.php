@@ -2,41 +2,37 @@
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\Page\Asset;
 
-
 Loc::loadMessages(__FILE__);
 
 $obAsset = Asset::getInstance();
-
 $obAsset->addString("<link rel='apple-touch-icon' href='apple-touch-icon.png'>");
+
 /*CSS*/
 $obAsset->addString("<link href='//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700' rel='stylesheet'>");
 $obAsset->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap.min.css');
 $obAsset->addCss(SITE_TEMPLATE_PATH . '/css/main.css');
 $obAsset->addCss(SITE_TEMPLATE_PATH . '/css/owl.carousel.min.css');
 $obAsset->addCss(SITE_TEMPLATE_PATH . '/css/owl.theme.default.css');
-$obAsset->addCss(SITE_TEMPLATE_PATH . '/css/animations.css');
 $obAsset->addCss(SITE_TEMPLATE_PATH . '/css/responsive.css');
 $obAsset->addCss(SITE_TEMPLATE_PATH . '/css/new-css.css');
+$obAsset->addString('<link rel="stylesheet" href="'. SITE_TEMPLATE_PATH .'/css/animate.css" media="screen and (min-width: 990px)">');
 $obAsset->addCss(SITE_TEMPLATE_PATH . '/css/magnific-popup.css');
 
 /*JS*/
 $obAsset->addString("<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>");
-$obAsset->addString("<script src=\"//api-maps.yandex.ru/2.1/?lang=ru_RU\" type=\"text/javascript\"></script>");
 $obAsset->addString("<script>window.jQuery || document.write('<script src=\"js/vendor/jquery-1.11.2.min.js\"><\/script>')</script>");
 $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js');
 $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/jquery.fancybox.pack.js');
 $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.maskedinput.min.js');
-//$obAsset->addJs(SITE_TEMPLATE_PATH . '/js/easeljs-0.6.0.min.js');
 $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/owl.carousel.js');
-//$obAsset->addJs(SITE_TEMPLATE_PATH . '/js/3dvr/view3d.js');
-$obAsset->addJs(SITE_TEMPLATE_PATH . '/js/css3-animate-it.js');
 $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.fs.stepper.js');
+$obAsset->addJs(SITE_TEMPLATE_PATH . '/js/wow.min.js');
 $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.magnific-popup.min.js');
-//$obAsset->addJs(SITE_TEMPLATE_PATH . '/js/vendor/zoomify.min.js');
-
+$obAsset->addJs(SITE_TEMPLATE_PATH . '/js/spritespin.js');
 $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
 $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/template.js');
 ?>
+
     <!doctype html>
     <html>
     <head>
@@ -55,8 +51,8 @@ $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/template.js');
     <![endif]-->
     <header class="header">
         <div class="container">
-            <div class="row animatedParent">
-                <div class="col-md-2 animated bounceInDown">
+            <div class="row">
+                <div class="col-md-2 wow bounceInDown" data-wow-duration="1500ms" data-wow-delay="100ms">
                     <div class="logo"><?
                         if( !\Main\IS_INDEX ){
                             ?><a href="/" class="logo__link"><?
@@ -69,13 +65,13 @@ $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/template.js');
                         }
                     ?></div>
                 </div> <!-- class="col-md-2"> -->
-                <div class="col-md-6 animated bounceInDown hidden-sm hidden-xs">
+                <div class="col-md-6 wow bounceInDown hidden-sm hidden-xs" data-wow-duration="1500ms" data-wow-delay="300ms">
                     <h2 class="header__title">научно-производственное предприятие элкар</h2>
                     <p class="header__mintext">
                         <?$APPLICATION->IncludeFile('/includes/header__main-text.php', array(), array('NAME' => 'Главный текст в шапке', 'MODE' => 'text'));?>
                     </p>
                 </div>
-                <div class="col-md-4 animated bounceInDown hidden-sm hidden-xs">
+                <div class="col-md-4 wow bounceInDown hidden-sm hidden-xs" data-wow-duration="1500ms" data-wow-delay="500ms">
                     <div class="row">
                         <div class="col-md-6">
                             <a href="#zvon" class="btn fancybox header__btn">Обратный звонок</a>
@@ -97,10 +93,10 @@ $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/template.js');
             </div> <!-- class="row"> -->
         </div><!--  class="container"> -->
         <div class="nav-t">
-            <div class="container nav-t__container animatedParent">
+            <div class="container nav-t__container">
                 <div class="nav-t__hide-btn hiden-mob">&#xf0c9;</div>
 
-                <nav class="nav-t__menu hiden-mob delay-250  animated fadeInDownShort">
+                <nav class="nav-t__menu hiden-mob delay-250  wow fadeInDownShort" data-wow-duration="1500ms" data-wow-delay="800ms">
                     <?$APPLICATION->IncludeComponent("bitrix:menu",".default",Array(
                             "ROOT_MENU_TYPE" => "top",
                             "MAX_LEVEL" => "1",
@@ -129,7 +125,7 @@ $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/template.js');
                         </div>
                     </div>
                 </nav>
-                <a href="#kontakt-f"  class="header__connekt fancybox btn animated fadeInRight">Свяжитесь с нами</a>
+                <a href="#kontakt-f" class="header__connekt fancybox btn wow fadeInDownShort" data-wow-duration="1500ms" data-wow-delay="1s"> Свяжитесь с нами</a>
             </div>
         </div>
     </header>

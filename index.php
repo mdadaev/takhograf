@@ -1,32 +1,26 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
 use \Bitrix\Main\Page\Asset;
-
 $APPLICATION->SetTitle('НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ ЭЛКАР');
-$obAsset = Asset::getInstance();
-$obAsset->addJs(SITE_TEMPLATE_PATH . '/js/index.js');
 ?>
-
     <section class="tahio">
-        <div class="container tahio__container animatedParent" data-sequence='200'>
+        <div class="container tahio__container ">
+
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="tahio__title animated fadeInDownShort" data-id='1'>Тахограф МИКАС</h1>
-
-                    <h3 class="tahio__title-min animated fadeInDownShort" data-id='2'>Современные технологии для <br>
-                        контроля и безопасности
-                    </h3>
-
-                    <div class="wrap animated fadeInDownShort" data-id='3'>
-                        <a href="#order" class="btn fancybox btn-lblue tahio_btn-lblue">Заказать тахограф</a>
-                        <a href="#kontakt-f" class="btn fancybox btn-lblue tahio_btn-lblue">Заказать консультацию</a>
+                    <h1 class="tahio__title wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="1200ms">Тахограф МИКАС</h1>
+                    <h3 class="tahio__title-min wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="1400ms">Современные технологии для
+                        <br> контроля и безопасности </h3>
+                    <div class="wrap ">
+                        <a href="#kontakt-f" class="btn fancybox btn-lblue tahio_btn-lblue wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="1600ms">Заказать тахограф</a>
+                        <a href="#kontakt-f" class="btn fancybox btn-lblue tahio_btn-lblue wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="1800ms">Заказать консультацию</a>
                     </div>
                 </div>
-                <div class="col-md-6 tahio__rel">
-                    <img class="big-tagograf  animated fadeInDownShort" data-id='4' src="<?=SITE_TEMPLATE_PATH?>/images/new/tahograf.png" alt="">
-                    <div class="wrap animated fadeInDownShort"  data-id='5'>
-                        <a href="#view3d-view"  class="btn  btn-trans tahio_btn-trans tahio_btn-margr">Посмотреть 3D</a>
-                        <a href="/"  class="btn  btn-trans tahio_btn-trans">Посмотреть эмулятор</a>
+                <div class="col-md-6 tahio__rel wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="1400ms">
+                    <img class="big-tagograf wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="1200ms" src="<?=SITE_TEMPLATE_PATH?>/images/new/tahograf.png" alt="">
+                    <div class="wrap ">
+                        <a href="#kontakt-f wow fadeInLeft" data-wow-delay="1400ms" data-wow-duration="1500ms" class="btn fancybox btn-trans tahio_btn-trans tahio_btn-margr">Посмотреть 3D</a>
+                        <a href="#kontakt-f wow fadeInLeft" data-wow-delay="1600ms" data-wow-duration="1500ms" class="btn fancybox btn-trans tahio_btn-trans">Посмотреть эмулятор</a>
                     </div>
                 </div>
             </div>
@@ -350,112 +344,48 @@ $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/index.js');
             <div class="view3d__wrap100">
                 <div class="view3d__absolblu"></div>
                 <div class="view3d__container3d container">
-                    <div class="view3d__dd3" id="view3d-view">
+                    <div class="view3d__dd3">
                         <div class="container text-center">
                             <div class="row">
                                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
-                                    <div class="rotation" style="position: relative; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00041.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00043.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00044.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00046.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00047.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00048.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00049.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00050.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00051.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00052.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00053.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00054.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00055.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00056.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00057.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00058.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00059.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00060.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00061.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00062.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00063.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00064.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00065.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00066.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00067.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00068.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00069.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00070.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00071.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00072.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00073.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00074.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00075.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00076.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00077.jpg"
-                                             style="display: none; width: 100%;">
-                                        <img src="<?= SITE_TEMPLATE_PATH ?>/js/3dvr/DSC00078.jpg"
-                                             style="display: none; width: 100%;">
+                                    <div id="many-images" class="rotation" style="position: relative; width: 100%;">
+                                        <div id='mySpriteSpin' class="container myspritespin"></div>
+                                    </div>   <!--id="many-images"-->
 
+
+                                    <!-- actual preloader -->
+                                    <div class="loader">
+                                        <div class="progress-bar">
+                                            <div class="progress-stripes"></div>
+                                            <div class="percentage">0%</div>
+                                        </div>
                                     </div>
+                                    <span class="loadtext">Грузим...</span>
+
 
                                     <div class="view3d__hide">
                                         <button class="btn btn-default btn-cycle active">Cycle</button>
                                         <button class="btn btn-default btn-reverse">Reverse</button>
 
-                                        <button class="btn btn-default btn-prev"></button>
-                                        <button class="btn btn-default btn-next"></button>
+                                        <button class="btn btn-default btn-prev"> </button>
+                                        <button class="btn btn-default btn-next"> </button>
 
-                                        <!--                                        <button class="btn btn-default btn-play">Stop</button>-->
-                                        <button class="btn btn-default btn-play-to">Play to 0</button>
+
+                                        <button class="btn btn-default btn-play-to2">Play to 0</button>
+
                                         <div class="view3d__button-wrap">
-                                            <button class="btn-play view3d__play js-view3d__play"></button>
+                                            <button class="btn-play view3d__play"> </button>
 
                                         </div>
-                                        <!--                                        <img src="-->
-                                        <? //=SITE_TEMPLATE_PATH?><!--/images/360-degrees.svg" alt="" class="view3d__360img">-->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- class="view3d__dd3"> -->
-                </div>
-                <!--  class="view3d__container3d container"> -->
-            </div>
-            <!-- class="view3d__wrap100"> -->
-        </div>
+                    </div> <!-- class="view3d__dd3"> -->
+
+                </div>  <!--  class="view3d__container3d container"> -->
+            </div> <!-- class="view3d__wrap100"> -->
+        </div> <!-- class="view3d__wrap0"> -->
         <!-- class="view3d__wrap0"> -->
     </section>
     <section class="about-ko sect-pad" id="about-ko">
@@ -463,16 +393,14 @@ $obAsset->addJs(SITE_TEMPLATE_PATH . '/js/index.js');
             <h2 class="regtitle regtitle_blu animated fadeInDown">о компании</h2>
 
             <div class="row about-ko__row ">
-                <div class="col-sm-6 animated bounceInLeft">
+
+                <div class="col-sm-6 wow bounceInLeft">
                     <div class="about-ko__video" id="play-button">
                         <img class="about-ko__pic" src="<?= SITE_TEMPLATE_PATH ?>/images/video.jpg" alt="видео">
 
-                        <iframe id="video" class="about-ko__frame"
-                                src="//www.youtube.com/embed/8bYokWOCH14?enablejsapi=1&html5=1" frameborder="0"
-                                allowfullscreen>
-                        </iframe>
-                        <svg class="about-ko__play" width="30px" height="45px">
-                            <use xlink:href="#video_play"></use>
+                        <div id="video-container"></div>
+                        <svg  class="about-ko__play" width="30px" height="45px">
+                            <use  xlink:href="#video_play"></use>
                         </svg>
                     </div>
                 </div>

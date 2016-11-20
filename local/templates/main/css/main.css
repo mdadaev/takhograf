@@ -309,18 +309,6 @@ a {
 
 
 }
-
-.forma__inpt.field_error {
-	border: 1px solid #f00;
-}
-
-.field_error_mess {
-	font-size: 12px;
-	margin-bottom: 10px;
-	color: #f00;
-	margin-top: -18px;
-}
-
 .forma__send {
     width: 100%;
     background-color: #349bee;
@@ -363,7 +351,7 @@ a {
 
 .tahio {
 	height: 52vh;
-	background: url('../images/topBg.jpg') center center no-repeat;
+	background: url('../images//topBg.jpg') center center no-repeat;
 	background-size: cover;
  	color:#fff;
 	display: -webkit-box;
@@ -484,7 +472,7 @@ a {
 	text-align: left;
 }
 .advantage {
-	background: url('../images/topBg2.jpg') center center no-repeat;
+	background: url('../images//topBg2.jpg') center center no-repeat;
 	background-size: cover;
 }
 .advantage__pic {
@@ -619,7 +607,7 @@ a {
     font-weight: bold;
 }
 .support {
-	background: url('../images/blueBg2.jpg') center center no-repeat;
+	background: url('../images//blueBg2.jpg') center center no-repeat;
 	background-size: cover;
 }
 .support__ul {
@@ -712,7 +700,7 @@ a {
     bottom: 15px;
     display: block;
     opacity: 1;
-    background: url('../images/360-degrees.svg') center center no-repeat;
+    background: url('../images//360-degrees.svg') center center no-repeat;
     opacity: 0.88;
     border:0 none;
     outline: 0 none;
@@ -782,8 +770,7 @@ a {
 .about-ko__pic {
 	width: 100%;
 	position: relative;
-	z-index: 2;
-	min-height: 305px;
+	z-index: 2
 }
 .about-ko__pic_hider {
 	z-index: 0;
@@ -808,7 +795,7 @@ a {
 	z-index: 3;
 }
 .licenz {
-	background: url('../images/sertBg.jpg') center center no-repeat;
+	background: url('../images//sertBg.jpg') center center no-repeat;
 	background-size: cover;	
 }
 
@@ -979,7 +966,7 @@ a {
   color: transparent; }
 
 .footer {
-	background: url('../images/noise.jpg') repeat 0px 0px;
+	background: url('../images//noise.jpg') repeat 0px 0px;
 	padding-bottom: 0;
 
 }
@@ -1346,7 +1333,7 @@ a {
 }
 
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-	background-image: url('../images/fancybox_sprite.png');
+	background-image: url('../images//fancybox_sprite.png');
 }
 
 #fancybox-loading {
@@ -1364,7 +1351,7 @@ a {
 #fancybox-loading div {
 	width: 44px;
 	height: 44px;
-	background: url('../images/fancybox_loading.gif') center center no-repeat;
+	background: url('../images//fancybox_loading.gif') center center no-repeat;
 }
 
 .fancybox-close {
@@ -1410,7 +1397,7 @@ a {
 	height: 100%;
 	cursor: pointer;
 	text-decoration: none;
-	background: transparent url('../images/blank.gif'); /* helps IE */
+	background: transparent url('../images//blank.gif'); /* helps IE */
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	z-index: 8040;
 }
@@ -1480,7 +1467,7 @@ a {
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	background: url('../images/fancybox_overlay.png');
+	background: url('../images//fancybox_overlay.png');
 }
 
 .fancybox-overlay-fixed {
@@ -1559,12 +1546,12 @@ a {
 	   only screen and (min-device-pixel-ratio: 1.5){
 
 	#fancybox-loading,  .fancybox-prev span, .fancybox-next span {
-		background-image: url('../images/fancybox_sprite@2x.png');
+		background-image: url('../images//fancybox_sprite@2x.png');
 		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
 	}
 
 	#fancybox-loading div {
-		background-image: url('../images/fancybox_loading@2x.gif');
+		background-image: url('../images//fancybox_loading@2x.gif');
 		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
 	}
 }

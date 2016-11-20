@@ -23,57 +23,57 @@
         </section>
         <footer class="footer sect-pad2" id="kontakts">
             <div class="container ">
-                <div class="animatedParent"><h2 class="regtitle center animated fadeInUpShort">Контакты</h2></div>
+                <div class=""><h2 class="regtitle center wow fadeInUpShort">Контакты</h2></div>
                 <div class="row">
-                    <div class="col-sm-4 animatedParent footer__col-sm-4" data-sequence='300'>
-                        <h3 class="footer__tconta animated animated fadeInLeftShort"  data-id='1'>
+                    <div class="col-sm-4  footer__col-sm-4" data-sequence='300'>
+                        <h3 class="footer__tconta wow wow fadeInLeft" data-id='1'>
                             менеджер проекта
                         </h3>
-                        <p class="footer__text animated fadeInLeftShort"  data-id='2'><?=tplvar('manager_name', true)?> <br>
+                        <p class="footer__text wow fadeInLeft"  data-id='2'><?=tplvar('manager_name', true)?> <br>
                             <?=tplvar('manager_organization', true)?> <br>
                             <?=tplvar('manager_address', true)?>
                         </p>
-                        <p class="footer__wraplink animated fadeInLeftShort"  data-id='3'>
+                        <p class="footer__wraplink wow fadeInLeft" data-id='3'>
                             <a class="footer__link" href="tel:<?=tplvar('manager_phone_call', true)?>">
                                 <i class="footer__round footer__round_btext"></i> <?=tplvar('manager_phone', true)?>
                             </a>
                         </p>
-                        <p class="footer__wraplink animated fadeInLeftShort"  data-id='4'>
+                        <p class="footer__wraplink wow fadeInLeft" data-id='4'>
                             <a class="footer__link" href="tel:<?=tplvar('manager_fax_call', true)?>">
                                 <i class="footer__round footer__round_btext">&#xe802;</i> <?=tplvar('manager_fax', true)?>
                             </a>
                         </p>
-                        <p class="footer__wraplink animated fadeInLeftShort"  data-id='5'>
+                        <p class="footer__wraplink wow fadeInLeft" data-id='5'>
                             <a class="footer__link" href="tel:<?=tplvar('manager_mobile_call', true)?>">
                                 <i class="footer__round footer__round_btext">&#xf10b;</i> <?=tplvar('manager_mobile', true)?>
                             </a>
                         </p>
-                        <p class="footer__wraplink animated fadeInLeftShort"  data-id='6'>
+                        <p class="footer__wraplink wow fadeInLeft" data-id='6'>
                             <a class="footer__link" href="mailto:<?=tplvar('manager_email', true)?>">
                                 <i class="footer__round footer__round_btext">&#xf0e0;</i> <?=tplvar('manager_email', true)?>
                             </a>
                         </p>
                     </div>
-                    <div class="col-sm-4 footer__col-sm-4 animatedParent " data-sequence='300' >
-                        <h3 class="footer__tconta animated fadeInLeftShort delay-750" data-id='1'>
+                    <div class="col-sm-4 footer__col-sm-4 " data-sequence='300' >
+                        <h3 class="footer__tconta wow fadeInLeft delay-750" data-id='1'>
                             руководитель проекта
                         </h3>
-                        <p class="footer__text animated fadeInLeftShort delay-750" data-id='2'><?=tplvar('project_manager_name', true)?> <br>
+                        <p class="footer__text wow fadeInLeft delay-750" data-id='2'><?=tplvar('project_manager_name', true)?> <br>
                             <?=tplvar('project_manager_organization', true)?><br>
                             <?=tplvar('project_manager_address', true)?>
                         </p>
 
-                        <p class="footer__wraplink animated fadeInLeftShort delay-750" data-id='3'>
+                        <p class="footer__wraplink wow fadeInLeft delay-750" data-id='3'>
                             <a class="footer__link" href="tel:<?=tplvar('project_manager_phone_call', true)?>">
                                 <i class="footer__round footer__round_btext"></i> <?=tplvar('project_manager_phone', true)?>
                             </a>
                         </p>
-                        <p class="footer__wraplink animated fadeInLeftShort delay-750" data-id='4'>
+                        <p class="footer__wraplink wow fadeInLeft delay-750">
                             <a class="footer__link" href="tel:<?=tplvar('project_manager_fax_call', true)?>">
                                 <i class="footer__round footer__round_btext">&#xe802;</i> <?=tplvar('project_manager_fax', true)?>
                             </a>
                         </p>
-                        <p class="footer__wraplink animated fadeInLeftShort delay-750" data-id='5'>
+                        <p class="footer__wraplink wow fadeInLeft delay-750">
                             <a class="footer__link" href="mailto:<?=tplvar('project_manager_email', true)?>">
                                 <i class="footer__round footer__round_btext">&#xf0e0;</i> <?=tplvar('project_manager_email', true)?>
                             </a>
@@ -101,64 +101,22 @@
                         <div class="footer__map-wrap animated fadeInLeftShort delay-750" data-id='6'>
 
                             <div class="footer__maping">
-                                <div>
-                                    <a href="https://yandex.ru/maps/?um=constructor:0kH17taHBe-lGUC_Z6SJ-X7fZWb-jfgq&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=0kH17taHBe-lGUC_Z6SJ-X7fZWb-jfgq&amp;width=360&amp;height=200&amp;lang=ru_RU&amp;sourceType=constructor" alt="" style="border: 0;"></a>
-                                </div>
+                                <div id="map-1"></div>
                             </div>
                         </div>
-                        <?$APPLICATION->IncludeComponent("bitrix:news.list","office-contacts",Array(
-                                "DISPLAY_DATE" => "N",
-                                "DISPLAY_NAME" => "Y",
-                                "DISPLAY_PICTURE" => "N",
-                                "DISPLAY_PREVIEW_TEXT" => "N",
-                                "AJAX_MODE" => "N",
-                                "IBLOCK_TYPE" => "Content",
-                                "IBLOCK_ID" => "12",
-                                "NEWS_COUNT" => "20",
-                                "SORT_BY1" => "SORT",
-                                "SORT_ORDER1" => "ASC",
-                                "SORT_BY2" => "ACTIVE_FROM",
-                                "SORT_ORDER2" => "DESC",
-                                "FILTER_NAME" => "",
-                                "FIELD_CODE" => Array(),
-                                "PROPERTY_CODE" => Array(),
-                                "CHECK_DATES" => "Y",
-                                "DETAIL_URL" => "",
-                                "PREVIEW_TRUNCATE_LEN" => "",
-                                "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                                "SET_TITLE" => "N",
-                                "SET_BROWSER_TITLE" => "N",
-                                "SET_META_KEYWORDS" => "N",
-                                "SET_META_DESCRIPTION" => "N",
-                                "SET_LAST_MODIFIED" => "N",
-                                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-                                "ADD_SECTIONS_CHAIN" => "N",
-                                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                                "PARENT_SECTION" => "",
-                                "PARENT_SECTION_CODE" => "",
-                                "INCLUDE_SUBSECTIONS" => "Y",
-                                "CACHE_TYPE" => "A",
-                                "CACHE_TIME" => "36000000",
-                                "CACHE_FILTER" => "N",
-                                "CACHE_GROUPS" => "N",
-                                "DISPLAY_TOP_PAGER" => "N",
-                                "DISPLAY_BOTTOM_PAGER" => "N",
-                                "PAGER_TITLE" => "Контакты",
-                                "PAGER_SHOW_ALWAYS" => "N",
-                                "PAGER_TEMPLATE" => "",
-                                "PAGER_DESC_NUMBERING" => "N",
-                                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-                                "PAGER_SHOW_ALL" => "Y",
-                                "PAGER_BASE_LINK_ENABLE" => "N",
-                                "SET_STATUS_404" => "N",
-                                "SHOW_404" => "N",
-                                "MESSAGE_404" => "",
-                                "PAGER_BASE_LINK" => "",
-                                "PAGER_PARAMS_NAME" => "arrPager"
-                            )
-                        );?>
-                    </div>
-                    <!-- class="col-sm-4"> -->
+                        <div class="footer__proezd-w animated fadeInLeftShort delay-750" data-id='7'>
+                            <b class="footer__proezd-name">Проезд:</b>
+                            <ul class="footer__proezd-list">
+                                <li class="footer__proezd-itm">
+                                    <a class="footer__proezd-link fancybox" href="#map1"> К офису</a></li>
+                                <li class="footer__proezd-itm">
+                                    <a class="footer__proezd-link fancybox" href="#map2"> К складу</a></li>
+                                <li class="footer__proezd-itm">
+                                    <a class="footer__proezd-link fancybox" href="#map3"> К пункту выдачи</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- class="col-sm-4"> -->
 
 
                     <div class="animatedParent clearfix">
@@ -276,6 +234,11 @@
             </form>
         </div>
 
+        <?$APPLICATION->IncludeFile('/includes/footer__main-office-info.php', array(), array('NAME' => 'Головной офис', 'MODE' => 'html'));?>
+        <?$APPLICATION->IncludeFile('/includes/footer__stock.php', array(), array('NAME' => 'Склад', 'MODE' => 'html'));?>
+        <?$APPLICATION->IncludeFile('/includes/footer__delivery-point.php', array(), array('NAME' => 'Пункт выдачи заказов', 'MODE' => 'html'));?>
+
+
         <div  id="spasib" class="js-fan-zvonok center">
             <div class="spacib-pad">
                 <svg  width="111px" height="56px">
@@ -290,5 +253,8 @@
             </p>
             <p>Спасибо за обращение.</p>
         </div>
+
+        <div id="script_place"></div>
+
     </body>
 </html>

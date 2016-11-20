@@ -54,7 +54,6 @@ $(document).ready(function () {
         }
     });
 
-
     function updateOrder() {
 
         var orderList = new Array();
@@ -171,7 +170,7 @@ $(document).ready(function () {
             cache: false,
             url: '/ajax/detail.php',
             success: function (data) {
-                $.fancybox(data, {
+                $.fancybox($(data), {
                     'padding': 0,
                     'beforeShow': function () {
                         var imgArr = [];
@@ -203,24 +202,6 @@ $(document).ready(function () {
                             }
                         });
                     },
-                });
-            }
-        });
-    });
-
-    $(document).on('click', '.footer__proezd-list a', function () {
-        var $this = $(this);
-        var elId = $this.data('id');
-        var ib = $this.data('iblock');
-
-        $.ajax({
-            type: "POST",
-            data: {'ID': elId, 'IBLOCK': ib},
-            cache: false,
-            url: '/ajax/office-detail.php',
-            success: function (data) {
-                $.fancybox(data, {
-                    'padding': 0,
                 });
             }
         });

@@ -1,6 +1,4 @@
-var www2 = document.body.clientWidth;
-  if (www2 > 990) {
-/*  ÄÎÐÀÁÎÒÀÍß ÂÅÐÑÈß! ÍÅ ÎÁÍÎÂËßÒÜ!!!!!
+/*
  * CSS3 Animate it
  * Copyright (c) 2014 Jack McCourt
  * https://github.com/kriegar/css3-animate-it
@@ -56,7 +54,7 @@ var www2 = document.body.clientWidth;
     var left = offset.left;
     var top = offset.top;
 
-    if (
+    if (top + $element.height() >= window_top &&
         top - ($element.data('appear-top-offset') || 0) <= window_top + $window.height() &&
         left + $element.width() >= window_left &&
         left - ($element.data('appear-left-offset') || 0) <= window_left + $window.width()) {
@@ -125,7 +123,39 @@ var www2 = document.body.clientWidth;
 // Source       - http://github.com/cowboy/jquery-dotimeout/raw/master/jquery.ba-dotimeout.js
 // (Minified)   - http://github.com/cowboy/jquery-dotimeout/raw/master/jquery.ba-dotimeout.min.js (1.0kb)
 // 
-
+// About: License
+// 
+// Copyright (c) 2010 "Cowboy" Ben Alman,
+// Dual licensed under the MIT and GPL licenses.
+// http://benalman.com/about/license/
+// 
+// About: Examples
+// 
+// These working examples, complete with fully commented code, illustrate a few
+// ways in which this plugin can be used.
+// 
+// Debouncing      - http://benalman.com/code/projects/jquery-dotimeout/examples/debouncing/
+// Delays, Polling - http://benalman.com/code/projects/jquery-dotimeout/examples/delay-poll/
+// Hover Intent    - http://benalman.com/code/projects/jquery-dotimeout/examples/hoverintent/
+// 
+// About: Support and Testing
+// 
+// Information about what version or versions of jQuery this plugin has been
+// tested with, what browsers it has been tested in, and where the unit tests
+// reside (so you can test it yourself).
+// 
+// jQuery Versions - 1.3.2, 1.4.2
+// Browsers Tested - Internet Explorer 6-8, Firefox 2-3.6, Safari 3-4, Chrome 4-5, Opera 9.6-10.1.
+// Unit Tests      - http://benalman.com/code/projects/jquery-dotimeout/unit/
+// 
+// About: Release History
+// 
+// 1.0 - (3/3/2010) Callback can now be a string, in which case it will call
+//       the appropriate $.method or $.fn.method, depending on where .doTimeout
+//       was called. Callback must now return `true` (not just a truthy value)
+//       to poll.
+// 0.4 - (7/15/2009) Made the "id" argument optional, some other minor tweaks
+// 0.3 - (6/25/2009) Initial release
 
 (function($){
   '$:nomunge'; // Used by YUI compressor.
@@ -138,13 +168,120 @@ var www2 = document.body.clientWidth;
     // A convenient shortcut.
     aps = Array.prototype.slice;
   
-
+  // Method: jQuery.doTimeout
+  // 
+  // Initialize, cancel, or force execution of a callback after a delay.
+  // 
+  // If delay and callback are specified, a doTimeout is initialized. The
+  // callback will execute, asynchronously, after the delay. If an id is
+  // specified, this doTimeout will override and cancel any existing doTimeout
+  // with the same id. Any additional arguments will be passed into callback
+  // when it is executed.
+  // 
+  // If the callback returns true, the doTimeout loop will execute again, after
+  // the delay, creating a polling loop until the callback returns a non-true
+  // value.
+  // 
+  // Note that if an id is not passed as the first argument, this doTimeout will
+  // NOT be able to be manually canceled or forced. (for debouncing, be sure to
+  // specify an id).
+  // 
+  // If id is specified, but delay and callback are not, the doTimeout will be
+  // canceled without executing the callback. If force_mode is specified, the
+  // callback will be executed, synchronously, but will only be allowed to
+  // continue a polling loop if force_mode is true (provided the callback
+  // returns true, of course). If force_mode is false, no polling loop will
+  // continue, even if the callback returns true.
+  // 
+  // Usage:
+  // 
+  // > jQuery.doTimeout( [ id, ] delay, callback [, arg ... ] );
+  // > jQuery.doTimeout( id [, force_mode ] );
+  // 
+  // Arguments:
+  // 
+  //  id - (String) An optional unique identifier for this doTimeout. If id is
+  //    not specified, the doTimeout will NOT be able to be manually canceled or
+  //    forced.
+  //  delay - (Number) A zero-or-greater delay in milliseconds after which
+  //    callback will be executed. 
+  //  callback - (Function) A function to be executed after delay milliseconds.
+  //  callback - (String) A jQuery method to be executed after delay
+  //    milliseconds. This method will only poll if it explicitly returns
+  //    true.
+  //  force_mode - (Boolean) If true, execute that id's doTimeout callback
+  //    immediately and synchronously, continuing any callback return-true
+  //    polling loop. If false, execute the callback immediately and
+  //    synchronously but do NOT continue a callback return-true polling loop.
+  //    If omitted, cancel that id's doTimeout.
+  // 
+  // Returns:
+  // 
+  //  If force_mode is true, false or undefined and there is a
+  //  yet-to-be-executed callback to cancel, true is returned, but if no
+  //  callback remains to be executed, undefined is returned.
   
   $[doTimeout] = function() {
     return p_doTimeout.apply( window, [ 0 ].concat( aps.call( arguments ) ) );
   };
   
-
+  // Method: jQuery.fn.doTimeout
+  // 
+  // Initialize, cancel, or force execution of a callback after a delay.
+  // Operates like <jQuery.doTimeout>, but the passed callback executes in the
+  // context of the jQuery collection of elements, and the id is stored as data
+  // on the first element in that collection.
+  // 
+  // If delay and callback are specified, a doTimeout is initialized. The
+  // callback will execute, asynchronously, after the delay. If an id is
+  // specified, this doTimeout will override and cancel any existing doTimeout
+  // with the same id. Any additional arguments will be passed into callback
+  // when it is executed.
+  // 
+  // If the callback returns true, the doTimeout loop will execute again, after
+  // the delay, creating a polling loop until the callback returns a non-true
+  // value.
+  // 
+  // Note that if an id is not passed as the first argument, this doTimeout will
+  // NOT be able to be manually canceled or forced (for debouncing, be sure to
+  // specify an id).
+  // 
+  // If id is specified, but delay and callback are not, the doTimeout will be
+  // canceled without executing the callback. If force_mode is specified, the
+  // callback will be executed, synchronously, but will only be allowed to
+  // continue a polling loop if force_mode is true (provided the callback
+  // returns true, of course). If force_mode is false, no polling loop will
+  // continue, even if the callback returns true.
+  // 
+  // Usage:
+  // 
+  // > jQuery('selector').doTimeout( [ id, ] delay, callback [, arg ... ] );
+  // > jQuery('selector').doTimeout( id [, force_mode ] );
+  // 
+  // Arguments:
+  // 
+  //  id - (String) An optional unique identifier for this doTimeout, stored as
+  //    jQuery data on the element. If id is not specified, the doTimeout will
+  //    NOT be able to be manually canceled or forced.
+  //  delay - (Number) A zero-or-greater delay in milliseconds after which
+  //    callback will be executed. 
+  //  callback - (Function) A function to be executed after delay milliseconds.
+  //  callback - (String) A jQuery.fn method to be executed after delay
+  //    milliseconds. This method will only poll if it explicitly returns
+  //    true (most jQuery.fn methods return a jQuery object, and not `true`,
+  //    which allows them to be chained and prevents polling).
+  //  force_mode - (Boolean) If true, execute that id's doTimeout callback
+  //    immediately and synchronously, continuing any callback return-true
+  //    polling loop. If false, execute the callback immediately and
+  //    synchronously but do NOT continue a callback return-true polling loop.
+  //    If omitted, cancel that id's doTimeout.
+  // 
+  // Returns:
+  // 
+  //  When creating a <jQuery.fn.doTimeout>, the initial jQuery collection of
+  //  elements is returned. Otherwise, if force_mode is true, false or undefined
+  //  and there is a yet-to-be-executed callback to cancel, true is returned,
+  //  but if no callback remains to be executed, undefined is returned.
   
   $.fn[doTimeout] = function() {
     var args = aps.call( arguments ),
@@ -342,7 +479,3 @@ $(document.body).on('appear', '.animatedParent', function(e, $affected){
  $(window).load(function(){
   $.force_appear();
  });
-
-
-
-  };

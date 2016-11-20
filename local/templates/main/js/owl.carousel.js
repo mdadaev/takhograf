@@ -1714,8 +1714,8 @@
 				};
 			}
 
-			if (event.pageX === undefined) {
-				return {
+		if (event.pageX === undefined) {
+			return {
 					x: event.clientX,
 					y: event.clientY
 				};

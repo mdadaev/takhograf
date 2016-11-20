@@ -1,5 +1,3 @@
-
-
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
@@ -9,15 +7,19 @@ var _circlr = require('circlr');
 
 var _circlr2 = _interopRequireDefault(_circlr); 
 
-var el = document.querySelector('.rotation');
-var btnCycle = document.querySelector('.btn-cycle');
-var btnReverse = document.querySelector('.btn-reverse');
-var btnPrev = document.querySelector('.btn-prev');
-var btnNext = document.querySelector('.btn-next');
-var btnPlay = document.querySelector('.btn-play');
+var el = document.querySelector('.rotation2');
+var btnCycle = document.querySelector('.btn-cycle2');
+var btnReverse = document.querySelector('.btn-reverse2');
+var btnPrev = document.querySelector('.btn-prev2');
+var btnNext = document.querySelector('.btn-next2');
+var btnPlay = document.querySelector('.btn-play2');
 var btnPlayTo = document.querySelector('.btn-play-to2');
-var bodys = document.querySelector('body');
 var camera = (0, _circlr2['default'])(el).scroll();
+
+
+
+
+
 
 btnCycle.addEventListener('click', function (e) {
   toggleActive(e.target);
@@ -29,34 +31,15 @@ btnReverse.addEventListener('click', function (e) {
   camera.reverse(isActive(e.target));
 }, false);
 
-// btnPrev.addEventListener('click', function () {
-//   camera.stop();
-//   camera.prev();
-// }, false);
+btnPrev.addEventListener('click', function () {
+  camera.stop();
+  camera.prev();
+}, false);
 
-// btnNext.addEventListener('click', function () {
-//   camera.stop();
-//   camera.next();
-// }, false);
-
-
-/*$("body").on( "click", function() {
-  console.log( 'klik' );
-  camera.play(0);
-  //btnPlayTo.click();
-});
-*/
-
-
-
- function play3d() {
-  camera.play(37);
-  console.log( 'klik' );
-  }
-setTimeout(play3d, 300);
-
-
-
+btnNext.addEventListener('click', function () {
+  camera.stop();
+  camera.next();
+}, false);
 
 btnPlay.addEventListener('click', function (e) {
   if (e.target.innerHTML === 'Play') {
@@ -68,35 +51,12 @@ btnPlay.addEventListener('click', function (e) {
   }
 }, false);
 
-btnPrev.addEventListener("mousedown", mouseDown3);
-btnPrev.addEventListener("mouseup", mouseUp3);
-function mouseDown3() {
-  camera.stop();
-  camera.play();
-};
-function mouseUp3() {
-    camera.stop();
-}
-
-
-btnNext.addEventListener("mousedown", mouseDown2);
-btnNext.addEventListener("mouseup", mouseUp2);
-function mouseDown2() {
-  camera.stop();
-  camera.play2();
-}
-
-function mouseUp2() {
-  camera.stop();
-}
-
-
-
-
-
 btnPlayTo.addEventListener('click', function () {
   camera.play(0);
 }, false);
+
+
+
 
 
 
@@ -111,16 +71,7 @@ function toggleActive(el) {
 function isActive(el) {
   return el.className.includes('active');
 }
-
-/**
- * Автозапуск
- */
-
-
-
-
-
-
+//btnPlay.click();
 },{"circlr":2}],2:[function(require,module,exports){
 
 'use strict';
@@ -153,7 +104,7 @@ function Rotation(el) {
   this.el = el;
   this.current = 0;
   this.cycle();
-  this.interval(50);
+  this.interval(75);
   this.start(0);
   this._ontouchstart = bind(this, 'ontouchstart');
   this._ontouchmove = bind(this, 'ontouchmove');
@@ -249,7 +200,7 @@ Rotation.prototype.start = function(n) {
 
   for (var i = 0, len = children.length; i < len; i++) {
     children[i].style.display = 'none';
-   children[i].style.width = '100%';
+    children[i].style.width = '100%';
   }
 
   this.show(n);
@@ -277,19 +228,7 @@ Rotation.prototype.play = function(n) {
   this.timer = setInterval(timer, this._interval);
   return this;
 };
-Rotation.prototype.play2 = function(n) {
-  if (this.timer) return;
-  var self = this;
 
-  function timer() {
-    if (n === undefined || n > self.current) self.prev();
-    if (n < self.current) self.next();
-    if (n === self.current) self.stop();
-  }
-
-  this.timer = setInterval(timer, this._interval);
-  return this;
-};
 /**
  * Stop sequence playback
  *
@@ -777,4 +716,3 @@ exports.unbind = function(el, type, fn, capture){
   return fn;
 };
 },{}]},{},[1]);
-

@@ -151,6 +151,19 @@ a {
 	padding-top: 4px;
 	padding-left: 4px;
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.header__contaks {
+		padding-left: 0px;
+	}
+}
+
+@supports (-ms-ime-align:auto) {
+	.header__contaks {
+		padding-left: 0px;
+	}
+}
+
 .nav-t {
  	height: 50px;
  	margin-top: 10px;

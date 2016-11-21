@@ -446,12 +446,12 @@ span.loaded.blue{
 }
   @media (min-width: 500px) {
     .myspritespin {
-      width: 500px;
+      width: 495px;
     }
   }
   @media (min-width: 650px) {
     .myspritespin {
-      width: 650px;
+      width: 587px;
     }
   }
   @media (min-width: 750px) {
@@ -553,8 +553,9 @@ span.loaded.blue{
         padding-bottom: 30px
     }
     .view3d__play {
-        left: 23%;
+        left: 50%;
         bottom: -19px;
+        transform: translateX(-50%);
     }
      .forma__inpt {
          font-family: inherit;
@@ -569,7 +570,13 @@ span.loaded.blue{
     .capabilities-windows__logo-wrap {
         margin-bottom: 20px
     }
-
+    span.blue {
+    color: #2980b9;
+    padding-bottom: 3px;
+    margin-bottom: 7px;
+    margin-top: -5px;
+    padding-right: 0
+    }
 
 }
  @media only screen and (min-width: 990px)  {
@@ -611,13 +618,7 @@ span.loaded.blue{
     .loader {
         width:265px
     }
-    span.blue {
-    color: #2980b9;
-    padding-bottom: 3px;
-    margin-bottom: 7px;
-    margin-top: -5px;
-    padding-right: 0
-    }
+
 
 }
 

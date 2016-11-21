@@ -63,25 +63,33 @@ $(document).ready(function () {
     var arroleft = document.querySelector(".btn-prev");
     var arroright = document.querySelector(".btn-next");
     var interval;
-    arroleft.addEventListener('mousedown', function () {
+    arroleft.addEventListener('mousedown', function() {
         interval = setInterval(toleft, 60);
     });
     arroleft.addEventListener('mouseup', function () {
         clearInterval(interval);
     });
-    function toleft() {
-        return api.skipFrames(1);
+    arroleft.addEventListener('mouseout', function () {
+        clearInterval(interval);
+    });
+    function toleft()
+    {   SpriteSpin.stopAnimation(api.data);
+        return api.skipFrames(-1);
     };
 
     var interval2;
-    arroright.addEventListener('mousedown', function () {
+    arroright.addEventListener('mousedown', function() {
         interval2 = setInterval(toright, 60);
     });
     arroright.addEventListener('mouseup', function () {
         clearInterval(interval2);
     });
-    function toright() {
-        return api.skipFrames(-1);
+    arroright.addEventListener('mouseout', function () {
+        clearInterval(interval2);
+    });
+    function toright()
+    {    SpriteSpin.stopAnimation(api.data);
+        return api.skipFrames(1);
     };
 // запуск 3д слайдера товара
 

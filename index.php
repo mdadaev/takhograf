@@ -19,7 +19,7 @@ $APPLICATION->SetTitle('НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДП
                     <img class="big-tagograf wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="1200ms" src="<?=SITE_TEMPLATE_PATH?>/images/tahograf.png" alt="">
                     <div class="wrap ">
                         <a href="#view3d" data-wow-delay="1400ms" data-wow-duration="1500ms" class="btn btn-trans tahio_btn-trans tahio_btn-margr">Посмотреть 3D</a>
-                        <a href="/images/takhograf-emulator.zip" data-wow-delay="1600ms" data-wow-duration="1500ms" class="btn fancybox btn-trans tahio_btn-trans js-download">Посмотреть эмулятор</a>
+                        <a href="/images/takhograf-emulator.zip" data-wow-delay="1600ms" data-wow-duration="1500ms" class="btn fancybox btn-trans tahio_btn-trans js-download">Скачать эмулятор</a>
                     </div>
                 </div>
             </div>

@@ -39,12 +39,12 @@ $this->setFrameMode(true);
 				data-x="<?=reset($arCoords)?>" 
 				data-y="<?=end($arCoords)?>" 
 				data-address="<?=$arResult["PROPERTIES"]["ADDRESS"]["VALUE"]?>">
-				<address>,
-					<strong><?=$arResult["PROPERTIES"]["HEADER"]["VALUE"]?></strong>,
+				<address>
+					<strong><?=$arResult["PROPERTIES"]["HEADER"]["VALUE"]?></strong>
 					<?if( !empty($arResult["PROPERTIES"]["ADDRESS"]["VALUE"]) )
 					{
-						?><br/>,
-						Адрес: <?=$arResult["PROPERTIES"]["ADDRESS"]["VALUE"]?>'<?
+						?><br/>
+						Адрес: <?=$arResult["PROPERTIES"]["ADDRESS"]["VALUE"]?><?
 					}?>
 					</address>
 			</div>

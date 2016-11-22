@@ -323,7 +323,7 @@ a {
 
 }
 
-.forma__inpt.field_error {
+.forma__inpt.field_error, .quest__inpt.field_error {
 	border: 1px solid #f00;
 }
 

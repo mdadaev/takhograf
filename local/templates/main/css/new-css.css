@@ -226,10 +226,16 @@ color:#fff;
  }
 
  .capabilities-windows {
-     max-width: 650px;
+     max-width: 700px;
      padding: 30px;
      display: none;
  }
+
+@media (min-width: 720px) {
+    .capabilities-windows {
+        min-width: 700px;
+    }
+}
 
  .capabilities-windows__biglogo {
      width: 47%;
@@ -246,6 +252,11 @@ color:#fff;
      margin-left: -30px;
     margin-right: -14px;
  }
+
+ .capabilities-windows img {
+     width: 100%;
+ }
+
 .capabilities__img, .advantage__img {
 
     cursor:pointer;

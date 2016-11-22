@@ -50,6 +50,7 @@ $(document).ready(function () {
         frameTime: 60,
         height: 681,
         loop: true,
+        reverse: true,
         sense: -1,
         responsive: true,
         animate: false
